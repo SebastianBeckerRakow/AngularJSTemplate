@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsTutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- polyfills -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <!-- vendor -->
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script>
+        System.import("system.config.js").then(function () {
+            System.import("app");
+        }).catch(function (error) {
+            console.error(error);
+        })
+    </script>
+</head>
+<body>
+    <app></app>
+</body>
+</html>
